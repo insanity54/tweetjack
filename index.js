@@ -30,4 +30,4 @@ schedule.scheduleJob('8 * * * *', function(){
 });
 
 //tweetjack.run(); // for immediate testing
-console.log('-=+||8   MAGICKAL TWEET JACK  8||+=-');
+console.log('-=+||8  MAGICKAL TWEETJACK  8||+=-');
