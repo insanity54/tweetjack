@@ -24,9 +24,8 @@ if (key == null ||
 tweetjack.init(key, secret, tokenKey, tokenSecret);
 
 
-schedule.scheduleJob('12 * * * *', function(){
+schedule.scheduleJob('51 * * * *', function(){
     console.log('>> tweeting the magick!');
     tweetjack.run();
 });
 
-tweetjack.run();
