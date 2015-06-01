@@ -1,0 +1,16 @@
+[Unit]
+Description=tweetjack systemd unit file
+After=tweetjack.service
+Requires=docker.service
+
+[Service]
+ExecStartPre=-/usr/bin/docker kill tweetjack
+ExecStartPre=-/usr/bin/docker rm tweetjack
+ExecStartPre=/usr/bin/docker pull node:0.10
+ExecStart=/usr/bin/docker run --name tweetjack -v /srv/tweetjack:/usr/src/tweetjack node:0.10 npm install && npm start
+ExecStartPost=-/usr/bin/etcdctl set /services/tweetjack/%H running
+ExecStop=/usr/bin/docker stop tweetjack
+ExecStopPost=-/usr/bin/etcdctl rm /services/tweetjack/%H
+
+[Install]
+WantedBy=multi-user.target
