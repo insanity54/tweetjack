@@ -20,6 +20,7 @@
   "dependencies": {
     "express": "^4.12.4",
     "nconf": "^0.7.1",
+    "node-schedule": "^0.2.8",
     "q": "^1.4.1",
     "twitter": "^1.2.5"
   }

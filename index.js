@@ -1,5 +1,6 @@
 var nconf = require('nconf');
 var tweetjack = require('./lib/tweetjack');
+var schedule = require('node-schedule');
 
 nconf.file('config.json');
 
@@ -20,4 +21,12 @@ if (key == null ||
 }
 
 
-tweetjack.run(key, secret, tokenKey, tokenSecret);
+tweetjack.init(key, secret, tokenKey, tokenSecret);
+
+
+schedule.scheduleJob('12 * * * *', function(){
+    console.log('>> tweeting the magick!');
+    tweetjack.run();
+});
+
+tweetjack.run();
