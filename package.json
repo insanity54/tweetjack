@@ -19,8 +19,8 @@
   "homepage": "https://github.com/robothive/tweetjack",
   "dependencies": {
     "express": "^4.12.4",
-    "nconf": "^0.7.1",
-    "node-schedule": "^0.2.8",
+    "nconf": "^0.10.0",
+    "node-schedule": "^1.3.0",
     "q": "^1.4.1",
     "twitter": "^1.2.5"
   }
