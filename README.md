@@ -1,4 +1,7 @@
 # tweetjack
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/insanity54/tweetjack.svg)](https://greenkeeper.io/)
+
 Pop tweets => Oleoresin Capsacin
 
 
